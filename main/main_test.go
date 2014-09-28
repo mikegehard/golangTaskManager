@@ -24,5 +24,6 @@ var _ = Describe("The greeting", func() {
 		Expect(err).NotTo(HaveOccurred())
 
 		Eventually(cli).Should(Exit(0))
+		Eventually(cli).Should(Say("Welcome to the Golang Task Manager!"))
 	})
 })
